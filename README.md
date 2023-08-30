@@ -39,4 +39,4 @@ funcionário cadastrado, garantindo que
 apenas as informações relevantes
 estejam disponíveis para cada cargo.
 ### Como foi realizado
-Segundo a necessidade do gerente, o ideal é separar os usuários em superclasses (como exemplo: ‘classe cliente’, ‘classe gerente’) e deixar visível para cada um apenas o’que lhe interessa. Para isso, seria necessário o uso de herança, seria inicialmente criada uma superclasse ‘funcionário’ (para separá-los dos clientes), depois seriam criadas subclasses com as funções de cada funcionário, por exemplo: ‘classe recepcionista’, ‘classe gerente’, etc.
+Segundo a necessidade do gerente, o ideal é separar os usuários em superclasses (como exemplo: ‘classe cliente’, ‘classe gerente’) e deixar visível para cada um apenas o’que lhe interessa. Para isso seria inicialmente criada uma classe ‘funcionário’, onde alem de conter todas as informações pesoais do funcionario tambem conteria seu cargo, através desse campo, uma outra classe chamada 'PermissoesFuncionario' poderia ser usada para separar as permissões e níveis de acesso dos funcionarios.
