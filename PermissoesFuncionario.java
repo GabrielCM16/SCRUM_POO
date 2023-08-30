@@ -1,5 +1,5 @@
 //Heloísa Raquel Siebeneichler
-class Permissoes_funcionario { // Definição da classe Permissoes_funcionario
+class PermissoesFuncionario { // Definição da classe PermissoesFuncionario
     public static void gerenciarPermissoes(Funcionario funcionario) { // Método para gerenciar permissões com base no cargo do funcionário
         String cargo = funcionario.getCargo(); // Obtém o cargo do funcionário
         
@@ -53,4 +53,4 @@ class Permissoes_funcionario { // Definição da classe Permissoes_funcionario
         Permissoes_funcionario.gerenciarPermissoes(funcionario3); // Chama a função para gerenciar permissões do funcionário 3
     }
 }
-//fim da classe Permissoes_funcionario
+//fim da classe PermissoesFuncionario
