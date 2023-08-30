@@ -1,3 +1,4 @@
+//Heloísa Raquel Siebeneichler
 class Permissoes_funcionario { // Definição da classe Permissoes_funcionario
     public static void gerenciarPermissoes(Funcionario funcionario) { // Método para gerenciar permissões com base no cargo do funcionário
         String cargo = funcionario.getCargo(); // Obtém o cargo do funcionário
