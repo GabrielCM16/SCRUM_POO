@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 public class TestarClube {
     public static void main(String[] args) {
 
@@ -21,18 +20,6 @@ public class TestarClube {
 
         // Exibindo os detalhes dos associados cadastrados
         painel.exibirDetalhesAssociados();
-
-        System.out.println("\n\nTestando a classe funcionarios:\n");
-
-        // Criando um objeto CadastroFuncionarios
-        CadastroFuncionarios cadastro = new CadastroFuncionarios();
-
-        // Cadastrando funcionários usando o método cadastrarFuncionario
-        cadastro.cadastrarFuncionario("Cleber Machado", "Rua Paraná, 1556", "999556674", "cleberM@gmail.com.", "Analista", 3000.0);
-        cadastro.cadastrarFuncionario("Rita Silva", "Rua Ipanema, 366 ", "998553201", "ritaS@gmail.com", "Gerente", 5000.0);
-
-        // Exibindo a lista de funcionários usando o método listarFuncionarios
-        cadastro.listarFuncionarios();
 
         //vamos agora criar novas atividades começando por turmas
         System.out.println("\n\nTestando a classe Turmas e Atividades:\n");
