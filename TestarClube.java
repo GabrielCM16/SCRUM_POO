@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class TestarClube {
     public static void main(String[] args) {
 
@@ -32,5 +33,33 @@ public class TestarClube {
 
         // Exibindo a lista de funcionários usando o método listarFuncionarios
         cadastro.listarFuncionarios();
+
+        //vamos agora criar novas atividades começando por turmas
+        System.out.println("\n\nTestando a classe Turmas e Atividades:\n");
+
+        Turma turma = painel.novaTurma("Terça-Feira", "15:00", "16:30");
+        Atividade atividade = new Atividade("Natação",
+         "Natação com professore especializados",
+         "10-18");
+
+         atividade.adicionarNivelHabilidade("Sem nivel especifico");
+
+         Turma outraTurma = new Turma("Quarta-Feira", "14:00", "15:30");
+              Turma outraTurma2 = new Turma("Sexta-Feira", "16:00", "17:30");
+
+// Criar outra instância de Atividade
+Atividade outraAtividade = new Atividade("Yoga",
+    "Yoga para relaxamento",
+    "18+");
+       outraAtividade.adicionarNivelHabilidade("Habilidades basicas em flexibilidade");
+
+         atividade.adicionarTurma(turma);
+         outraAtividade.adicionarTurma(outraTurma);
+           outraAtividade.adicionarTurma(outraTurma2);
+
+         painel.cadastrarAtividade(atividade);
+        painel.cadastrarAtividade(outraAtividade);
+
+        painel.mostrarAtividades();
     }
 }   
