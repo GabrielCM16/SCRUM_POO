@@ -1,5 +1,5 @@
 // Este código é um sistema simples de informações de funcionários que permite aos
-// usuários fazer login, visualizar e atualizar suas informações pessoais, como nome, email e cargo.
+// usuários visualizar e atualizar suas informações pessoais, como nome, email e cargo.
 import java.util.HashMap; // Importa a classe HashMap do pacote java.util
 import java.util.Map; // Importa a interface Map do pacote java.util
 import java.util.Scanner; // Importa a classe Scanner do pacote java.util
