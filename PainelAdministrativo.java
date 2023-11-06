@@ -61,16 +61,32 @@ class PainelAdministrativo { //inicio da classe PainelAdministrativo
         return atividades;
     }
 
-    public void mostrarAtividades(){
+    public void mostrarAtividadesETurmas(){
         int auxCont = 1;
         for (Atividade at : atividades){
            System.out.println("Att " + auxCont + ": " + at.getNome() + " Faixa Etaria: " + at.getFaixaEtariaIndicada());
            System.out.println("Descrição: " + at.getDescricao());
+           System.out.println("Nivel de habilidades: " + at.getNiveisHabilidade());
            for (Turma turmaObj: at.getTurmas()){
                System.out.println("Turmas: " + turmaObj.getDiaSemana() + " Inicio: " + turmaObj.getHorarioInicio() + " Fim: " + turmaObj.getHorarioTermino());
            }
            auxCont++;
            System.out.println("\n");
         }
+    }
+
+    public void mostrarAtividades(){
+        int auxCont = 1;
+        for (Atividade at : atividades){
+           System.out.println("Att " + auxCont + ": " + at.getNome() + " Faixa Etaria: " + at.getFaixaEtariaIndicada());
+           System.out.println("Descrição: " + at.getDescricao());
+            System.out.println("Nivel de habilidades: " + at.getNiveisHabilidade());
+           auxCont++;
+           System.out.println("\n");
+        }
+    }
+
+    public void cadastrarTurmaPorAtividade(Turma turma, Atividade atividade){
+        atividade.adicionarTurma(turma);
     }
 } //fim da classe PainelAdministrativo

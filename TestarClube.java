@@ -31,8 +31,8 @@ public class TestarClube {
 
          atividade.adicionarNivelHabilidade("Sem nivel especifico");
 
-         Turma outraTurma = new Turma("Quarta-Feira", "14:00", "15:30");
-              Turma outraTurma2 = new Turma("Sexta-Feira", "16:00", "17:30");
+        Turma outraTurma = new Turma("Quarta-Feira", "14:00", "15:30");
+        Turma outraTurma2 = new Turma("Sexta-Feira", "16:00", "17:30");
 
 // Criar outra instância de Atividade
 Atividade outraAtividade = new Atividade("Yoga",
@@ -40,13 +40,26 @@ Atividade outraAtividade = new Atividade("Yoga",
     "18+");
        outraAtividade.adicionarNivelHabilidade("Habilidades basicas em flexibilidade");
 
-         atividade.adicionarTurma(turma);
-         outraAtividade.adicionarTurma(outraTurma);
-           outraAtividade.adicionarTurma(outraTurma2);
+       //cadastra a nova atividade
 
-         painel.cadastrarAtividade(atividade);
+        painel.cadastrarAtividade(atividade);
         painel.cadastrarAtividade(outraAtividade);
 
+        Turma outraTurmaCadastro = new Turma("Segunda-Feira", "21:00", "22:30");
+
+        //por atividade cadastra uma turma passando a atividade e a turma nova
+
+        painel.cadastrarTurmaPorAtividade(outraTurmaCadastro, outraAtividade);
+        painel.cadastrarTurmaPorAtividade(outraTurma2, outraAtividade);
+        painel.cadastrarTurmaPorAtividade(outraTurma, outraAtividade);
+        painel.cadastrarTurmaPorAtividade(turma, atividade);
+
+        //mostra todas as atividades
+        System.out.println("Mostrando todas as atividades\n");
         painel.mostrarAtividades();
+
+         //listando todas as atividades e suas respectivas turmas e horarios
+        System.out.println("Mostrando todas as atividades e suas respectivas turmas e horarios\n");
+        painel.mostrarAtividadesETurmas();
     }
 }   
