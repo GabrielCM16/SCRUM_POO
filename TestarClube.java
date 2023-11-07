@@ -25,20 +25,16 @@ public class TestarClube {
         System.out.println("\n\nTestando a classe Turmas e Atividades:\n");
 
         Turma turma = painel.novaTurma("Terça-Feira", "15:00", "16:30");
-        Atividade atividade = new Atividade("Natação",
-         "Natação com professore especializados",
-         "10-18");
+        Atividade atividade = new Atividade("Natação", "Natação com professore especializados","10-18");
 
-         atividade.adicionarNivelHabilidade("Sem nivel especifico");
+        atividade.adicionarNivelHabilidade("Sem nivel especifico");
 
         Turma outraTurma = new Turma("Quarta-Feira", "14:00", "15:30");
         Turma outraTurma2 = new Turma("Sexta-Feira", "16:00", "17:30");
 
         // Criar outra instância de Atividade
-        Atividade outraAtividade = new Atividade("Yoga",
-        "Yoga para relaxamento",
-        "18+");
-       outraAtividade.adicionarNivelHabilidade("Habilidades basicas em flexibilidade");
+        Atividade outraAtividade = new Atividade("Yoga","Yoga para relaxamento","18+");
+        outraAtividade.adicionarNivelHabilidade("Habilidades basicas em flexibilidade");
 
        //cadastra a nova atividade
 
@@ -94,8 +90,8 @@ public class TestarClube {
         Lanchonete lanchonete = new Lanchonete();
    
         // Registrando consumos
-        lanchonete.registrarConsumo(associado1, 10.50);
-        lanchonete.registrarConsumo(associado2, 8.75);
+        Lanchonete.registrarConsumo(Associado1, 10.50);
+        Lanchonete.registrarConsumo(Associado2, 8.75);
    
         // Obtendo a lista de consumos
         List<Consumo> consumos = lanchonete.getConsumos();
