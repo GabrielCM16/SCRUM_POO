@@ -61,5 +61,17 @@ Atividade outraAtividade = new Atividade("Yoga",
          //listando todas as atividades e suas respectivas turmas e horarios
         System.out.println("Mostrando todas as atividades e suas respectivas turmas e horarios\n");
         painel.mostrarAtividadesETurmas();
+
+        Associado associado = new Associado("Nome do Associado", 0);
+
+        // Supondo que as atividades sejam identificadas por uma string única
+        // Registra algumas faltas para o associado em diferentes atividades
+        associado.registrarFalta("Atividade 1");
+        associado.registrarFalta("Atividade 2");
+        associado.registrarFalta("Atividade 1");
+
+        // Exibe o número de faltas para o associado em atividades específicas
+        System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 1") + " faltas na Atividade 1.");
+        System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 2") + " faltas na Atividade 2.");
     }
 }   
