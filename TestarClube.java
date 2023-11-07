@@ -34,10 +34,10 @@ public class TestarClube {
         Turma outraTurma = new Turma("Quarta-Feira", "14:00", "15:30");
         Turma outraTurma2 = new Turma("Sexta-Feira", "16:00", "17:30");
 
-// Criar outra instância de Atividade
-Atividade outraAtividade = new Atividade("Yoga",
-    "Yoga para relaxamento",
-    "18+");
+        // Criar outra instância de Atividade
+        Atividade outraAtividade = new Atividade("Yoga",
+        "Yoga para relaxamento",
+        "18+");
        outraAtividade.adicionarNivelHabilidade("Habilidades basicas em flexibilidade");
 
        //cadastra a nova atividade
