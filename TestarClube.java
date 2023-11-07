@@ -85,4 +85,24 @@ Atividade outraAtividade = new Atividade("Yoga",
             System.out.println(atividade);
             System.out.println();
         }
+         //Testando a classe Consumo
+        // Criando alguns associados
+        Associado associado1 = new Associado("João", 1);
+        Associado associado2 = new Associado("Maria", 2);
+   
+        // Criando a lanchonete
+        Lanchonete lanchonete = new Lanchonete();
+   
+        // Registrando consumos
+        lanchonete.registrarConsumo(associado1, 10.50);
+        lanchonete.registrarConsumo(associado2, 8.75);
+   
+        // Obtendo a lista de consumos
+        List<Consumo> consumos = lanchonete.getConsumos();
+   
+        // Exibindo os consumos
+        for (Consumo consumo : consumos) {
+            PrintStream out = System.out;
+            out.println("Associado: " + consumo.getAssociado().getNome() + ", Valor: " + consumo.getValor());
+        }
 }   
