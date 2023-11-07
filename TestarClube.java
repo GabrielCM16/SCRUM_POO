@@ -74,4 +74,15 @@ Atividade outraAtividade = new Atividade("Yoga",
         System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 1") + " faltas na Atividade 1.");
         System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 2") + " faltas na Atividade 2.");
     }
+        // Adicionar atividades esportivas
+        clube.adicionarAtividade(new AtividadeEsportiva("Yoga", "Segunda-feira, 18:00", "Prática de yoga para relaxamento", "Instrutor A", "Iniciante"));
+        clube.adicionarAtividade(new AtividadeEsportiva("Musculação", "Terça-feira, 16:00", "Treino de musculação", "Instrutor B", "Avançado"));
+        clube.adicionarAtividade(new AtividadeEsportiva("Natação", "Quarta-feira, 10:00", "Aulas de natação", "Instrutor C", "Intermediário"));
+
+        // Listar atividades para o associado
+        List<AtividadeEsportiva> atividades = clube.listarAtividades();
+        for (AtividadeEsportiva atividade : atividades) {
+            System.out.println(atividade);
+            System.out.println();
+        }
 }   
