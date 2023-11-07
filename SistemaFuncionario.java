@@ -17,6 +17,9 @@ class Funcionario {
         this.cargo = cargo; // Inicializa o cargo do funcionário com o valor fornecido
     }
 
+    public Funcionario(String string, String string2) {
+    }
+
     // Getters e setters para os atributos nome, email e cargo
     public String getNome() { // Método getter para o nome
         return nome; // Retorna o valor do nome do funcionário
@@ -46,6 +49,13 @@ class Funcionario {
     @Override
     public String toString() {
         return "Nome: " + nome + "\nEmail: " + email + "\nCargo: " + cargo;
+    }
+
+    public String getSalario() {
+        return null;
+    }
+
+    public void setEndereco(String endereco) {
     }
 }
 
