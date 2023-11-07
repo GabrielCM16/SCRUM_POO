@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 class Associado {
     private String nome;
+    private int id;
     private String endereco;
     private String telefone;
     private String email;
@@ -9,7 +10,7 @@ class Associado {
     private double pagamentoMensal;
     private String formaPagamento;
 
-    public Associado(String nome, String endereco, String telefone, String email, double pagamentoMensal, String formaPagamento) {
+    public Associado(String nome, Int id, String endereco, String telefone, String email, double pagamentoMensal, String formaPagamento) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -24,6 +25,11 @@ class Associado {
         dependentes.add(dependente);
     }
 
+     public Associado(String nome, int id) {
+        this.nome = nome;
+        this.id = id;
+    }
+
     // Getter para nome
     public String getNome() {
         return nome;
@@ -32,6 +38,10 @@ class Associado {
     // Setter para nome
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getId() {
+        return id;
     }
 
     // Getter para endereco
