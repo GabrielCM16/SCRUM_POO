@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 class PainelAdministrativo { //inicio da classe PainelAdministrativo
     private ArrayList<Associado> associados; //cria um array de associados
-    private ArrayList<Atividade> atividades; //cria um array de atividades
+    private ArrayList<AtividadeEsportiva> atividades; //cria um array de atividades
 
     public PainelAdministrativo() {  
         associados = new ArrayList<>();
@@ -53,17 +53,17 @@ class PainelAdministrativo { //inicio da classe PainelAdministrativo
         return turma; //retorna
     }
 
-    public void cadastrarAtividade(Atividade atividade){
+    public void cadastrarAtividade(AtividadeEsportiva atividade){
         atividades.add(atividade);
     }
 
-    public ArrayList<Atividade> getAtividades(){
+    public ArrayList<AtividadeEsportiva> getAtividades(){
         return atividades;
     }
 
     public void mostrarAtividadesETurmas(){
         int auxCont = 1;
-        for (Atividade at : atividades){
+        for (AtividadeEsportiva at : atividades){
            System.out.println("Att " + auxCont + ": " + at.getNome() + " Faixa Etaria: " + at.getFaixaEtariaIndicada());
            System.out.println("Descrição: " + at.getDescricao());
            System.out.println("Nivel de habilidades: " + at.getNiveisHabilidade());
@@ -77,7 +77,7 @@ class PainelAdministrativo { //inicio da classe PainelAdministrativo
 
     public void mostrarAtividades(){
         int auxCont = 1;
-        for (Atividade at : atividades){
+        for (AtividadeEsportiva at : atividades){
            System.out.println("Att " + auxCont + ": " + at.getNome() + " Faixa Etaria: " + at.getFaixaEtariaIndicada());
            System.out.println("Descrição: " + at.getDescricao());
             System.out.println("Nivel de habilidades: " + at.getNiveisHabilidade());
@@ -86,7 +86,7 @@ class PainelAdministrativo { //inicio da classe PainelAdministrativo
         }
     }
 
-    public void cadastrarTurmaPorAtividade(Turma turma, Atividade atividade){
+    public void cadastrarTurmaPorAtividade(Turma turma, AtividadeEsportiva atividade){
         atividade.adicionarTurma(turma);
     }
 } //fim da classe PainelAdministrativo
