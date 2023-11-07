@@ -12,6 +12,7 @@ class Associado {
 
     public Associado(String nome, Int id, String endereco, String telefone, String email, double pagamentoMensal, String formaPagamento) {
         this.nome = nome;
+          private int id;
         this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
