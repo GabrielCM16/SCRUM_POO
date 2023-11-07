@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 class Associado {
     private String nome;
@@ -9,16 +11,17 @@ class Associado {
     private ArrayList<Dependente> dependentes;
     private double pagamentoMensal;
     private String formaPagamento;
+    private Map<String, Integer> faltasPorAtividade; // Armazena o número de faltas por atividade
 
-    public Associado(String nome, Int id, String endereco, String telefone, String email, double pagamentoMensal, String formaPagamento) {
+    public Associado(String nome, int id, String endereco, String telefone, String email, double pagamentoMensal, String formaPagamento) {
         this.nome = nome;
-          private int id;
         this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
         this.dependentes = new ArrayList<>();
         this.pagamentoMensal = pagamentoMensal;
         this.formaPagamento = formaPagamento;
+        this.faltasPorAtividade = new HashMap<>();
     }
 
     public void adicionarDependente(String nome, int idade) {
@@ -99,4 +102,33 @@ class Associado {
     public void setFormaPagamento(String formaPagamento) {
         this.formaPagamento = formaPagamento;
     }
+
+    public void registrarFalta(String atividade) {
+        if (faltasPorAtividade.containsKey(atividade)) {
+            int faltas = faltasPorAtividade.get(atividade);
+            faltasPorAtividade.put(atividade, faltas + 1);
+        } else {
+            faltasPorAtividade.put(atividade, 1);
+        }
+    }
+
+    public int getFaltas(String atividade) {
+        return faltasPorAtividade.getOrDefault(atividade, 0);
+    }
+
+    public void main(String[] args) {
+        // Cria uma instância de Associado
+        Associado associado = new Associado("Nome do Associado", id);
+
+        // Supondo que as atividades sejam identificadas por uma string única
+        // Registra algumas faltas para o associado em diferentes atividades
+        associado.registrarFalta("Atividade 1");
+        associado.registrarFalta("Atividade 2");
+        associado.registrarFalta("Atividade 1");
+
+        // Exibe o número de faltas para o associado em atividades específicas
+        System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 1") + " faltas na Atividade 1.");
+        System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 2") + " faltas na Atividade 2.");
+    }
+    
 }
