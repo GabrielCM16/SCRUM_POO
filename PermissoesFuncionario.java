@@ -44,13 +44,13 @@ class PermissoesFuncionario { // Definição da classe PermissoesFuncionario
         Funcionario funcionario3 = new Funcionario("C", "Gerente"); // Cria um funcionário Gerente
 
         System.out.println("Permissões do Funcionário 1:");
-        Permissoes_funcionario.gerenciarPermissoes(funcionario1); // Chama a função para gerenciar permissões do funcionário 1
+        PermissoesFuncionario.gerenciarPermissoes(funcionario1); // Chama a função para gerenciar permissões do funcionário 1
 
         System.out.println("\nPermissões do Funcionário 2:");
-        Permissoes_funcionario.gerenciarPermissoes(funcionario2); // Chama a função para gerenciar permissões do funcionário 2
+        PermissoesFuncionario.gerenciarPermissoes(funcionario2); // Chama a função para gerenciar permissões do funcionário 2
 
         System.out.println("\nPermissões do Funcionário 3:");
-        Permissoes_funcionario.gerenciarPermissoes(funcionario3); // Chama a função para gerenciar permissões do funcionário 3
+        PermissoesFuncionario.gerenciarPermissoes(funcionario3); // Chama a função para gerenciar permissões do funcionário 3
     }
 }
 //fim da classe PermissoesFuncionario
