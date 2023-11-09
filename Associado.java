@@ -131,4 +131,7 @@ class Associado {
         System.out.println("O associado " + associado.getNome() + " tem " + associado.getFaltas("Atividade 2") + " faltas na Atividade 2.");
     }
     
+    public boolean inscreverEmAtividade(Atividade atividade) {
+        return atividade.inscreverAssociado(this);
+    }
 }
